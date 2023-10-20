@@ -1,17 +1,40 @@
-import Link from 'next/link';
-export default function Home() {
+// import Link from 'next/link';
+import {useRouter} from 'next/router';
+
+export default function Homepage() {
+    const router = useRouter();
     return (
-        <div style={{display: 'flex', flexDirection: 'column'}}>
-            <h1>3003 Home page</h1>
-            <Link href={`https://test.nextjs-shop.com/one`}>
-                Go to 3004 Home
-            </Link>
-            <Link href={`https://test.nextjs-shop.com/two`}>
-                Go to 3005 Home
-            </Link>
-            <Link href={`https://test.nextjs-shop.com/about`}>
-                Go to 3003 About
-            </Link>
-        </div>
+        <ul>
+            <li>
+                <a
+                    onClick={() => {
+                        router.push('https://eshop.geef.cc');
+                    }}
+                    href='#'
+                    data-text='Home'>
+                    Eshop
+                </a>
+            </li>
+            <li>
+                <a
+                    onClick={() => {
+                        router.push('https://take.geef.cc');
+                    }}
+                    href='#'
+                    data-text='Blogs'>
+                    Take
+                </a>
+            </li>
+            <li>
+                <a
+                    onClick={() => {
+                        router.push('https://www.cypossystems.com.cy');
+                    }}
+                    href='#'
+                    data-text='Coding'>
+                    Cypos
+                </a>
+            </li>
+        </ul>
     );
 }

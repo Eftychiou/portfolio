@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start -p 3004",
         "lint": "next lint",
-        "pm2:start": "pm2 start npm --name portfolio -- start"
+        "pm2:start": "pm2 start npm --name Portfolio -- start"
     },
     "dependencies": {
         "@next/font": "13.2.4",

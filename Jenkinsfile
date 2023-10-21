@@ -9,17 +9,17 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'sudo -u ubuntu npm install'
+                sh 'npm install'
             }
         }
         stage('Build') {
             steps {
-                sh 'sudo -u ubuntu npm run build'
+                sh 'npm run build'
             }
         }
         stage('Start PM2') {
             steps {
-              sh 'sudo -u ubuntu npm run pm2:start'                
+                sh 'npm run pm2:start'
             }
         }
     }
